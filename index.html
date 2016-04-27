@@ -1,0 +1,93 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//ES" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="theme-color" content="#000000"/>
+<!--<meta http-equiv="refresh" content="1"><!--Linea que refresca la página-->
+<title>Generador</title>
+
+<!-- HOJAS DE ESTILO -->
+<meta name="viewport" content="width=device-width" />
+<link href="reset.css" rel="stylesheet" type="text/css"/>
+<link href="style.css" rel="stylesheet" type="text/css"/>
+<link href="carga.css" rel="stylesheet" type="text/css"/>
+<!-- FIN HOJAS DE ESTILO -->
+
+<script type="text/javascript">
+document.oncontextmenu = function(){return false}
+</script>
+
+</head>
+
+<body align=center class="html">
+
+	<form name="formulario" id="formulario" method='post'>
+	<h2>Generador de links</h2>
+	
+	<h3>Introduzca URL:</h3>
+	<input type='text' name='direccion' placeholder='Por defecto:  http://www.gratispaste.com/?v=' 
+	value='http://www.gratispaste.com/?v=' size=40 maxlength="50"><br><br>
+	
+	<h3>Límite de tiempo:</h3>
+	<select name="limite"> 
+	<option value="30">30 segundos</option>
+	<option value="60">1 minuto</option>
+	<option value="120">2 minutos</option>
+	<option value="300">5 minutos</option>
+	<option value="600">10 minutos</option>
+	<option value="1800">30 minutos</option>
+	<option value="3600">1 hora</option>
+	</select><br><br>
+	
+	<h3>Índice de página:</h3>
+	<input type='text' name='inicio' placeholder='0' size=6 maxlength="4" value='0'><br>
+	<input type='text' name='fin' placeholder='(...)' size=6 maxlength="4" value='5'><br><br>
+	
+	<h3>Modo de guardado:</h3>
+	<input type='radio' name='modo' value='no' checked="checked"><label>No guardar</label><br>
+	<input type='radio' name='modo' value='fichero'><label>Fichero HTML</label><br>
+	<input type='radio' name='modo' value='SQL'><label>Base de datos</label><br>
+	
+	<input type='submit' value='Generar' class="boton" onclick="proceso();">
+	</form>
+
+	
+	
+	<script>
+		function proceso(){
+			document.formulario.action="generador.php";
+			document.formulario.submit();
+			
+			document.write("<html style='color:white;background-color:black;text-align:center;font-size:34px;width:100%;height:auto;padding-top:7em;'>");
+			document.write('<head>');
+			document.write('<title>');
+			document.write('Generando...');
+			document.write('</title>');
+			document.write('<link href="carga.css" rel="stylesheet" type="text/css"/>');
+			document.write('</head>');
+			document.write('Generando enlaces...');
+			document.write('<div id="preloader_1">');
+			document.write('<span></span>');
+			document.write('<span></span>');
+			document.write('<span></span>');
+			document.write('<span></span>');
+			document.write('<span></span>');
+			document.write('</div>');
+			document.write("</html>");
+		}
+	</script>
+	
+	<!--
+	<div id="preloader_1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>-->
+	
+</body>
+<footer>
+	<p>2016 © Generador PHP | Christian Cabrero</p>
+</footer>
+</html>
