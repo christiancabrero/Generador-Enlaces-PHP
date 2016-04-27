@@ -1,2 +1,2 @@
-# Generador-Enlaces-PHP
-Indexador automático de enlaces permalinks. Válido para URIS del tipo "?p=123" 
+# Generador de enlaces PHP
+Indexador automático Query string PHP para URL's no semánticas del tipo "?p=123"
