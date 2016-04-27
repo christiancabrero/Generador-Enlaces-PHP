@@ -1,5 +1,5 @@
 # Generador de enlaces PHP
-Indexador automático Query string PHP para URL's extensas no semánticas del tipo "?p=123"
+Indexador automático Query string PHP para URL's extensas no semánticas con parámetros numéricos del tipo "?p=123"
 >### Instalación y uso:
 >1. Introducir todos los archivos en la ruta deseada del servidor web
 >2. Introducir URL hasta el valor variable
